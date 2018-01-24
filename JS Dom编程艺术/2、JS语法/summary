@@ -1,0 +1,38 @@
+1、在JS里用反斜线对字符进行定义（反斜线并不是字符串的一部分）
+   如：var mood = "don't ask";可以写成 var mood = 'don\t ask';(本书作者习惯用双引号)
+2、布尔值：true false
+3、建议用//注释单行，用/*注释多行
+3、数组：数组下标从0开始而不是1
+   var beatles（乐队）= Array(4)； (array是数组，括号里的元素可以不填)
+   var beatles = array("john","paul","george","ringo");
+   array[index] = element; ex:beatles[0] = "john";
+   数组元素不必一定是字符串，可以把一些布尔值存入一个数组，还可以把一组数组存入一个数组，还可以是变量，数组还可以包含其他数组。
+   ex： var lennon = ["john",1940,false];
+   var beatles = [];
+   beatles[0] = lennon; beatles[0][0] = "john";
+4、创建对象使用object关键字，使用点号来获取属性
+   var lennon = object();
+   lennon.name = "john";
+   用对象来代替传统数组的做法意味着可以通过元素的name而不是下标数字来引用它们，提高了脚本可读性。
+5、条件语句：条件的求值结果永远是一个布尔值
+   if(1>2){
+     alert("...");
+     }
+     相等操作符“==”认为空字符串与false的含义相同，全等操作符"==="不仅比较值还比较变量类型
+     逻辑非"!"是将逻辑操作数所返回的布尔值取反
+6、循环语句：
+   var count = 1;
+   while (count<11) {
+       alert (count);
+       count++;
+       }
+   var count = 1;
+   do {
+       alert(count);
+       count++;
+       }while(count<11);循环内部的代码至少循环一次
+   for (var count = 1; count<11; count++) {
+       alert (count);
+       }for循环最常见的用途之一是对某个数组的全体元素进行遍历处理，这需要用到数组的array和length属性
+7、函数命名用驼峰命名法：从第二个单词开始把每个单词的首字母写成大写形式
+   命名变量：用下划线分隔各个单词

@@ -1,0 +1,12 @@
+1、DOM：document-把编写的网页文档转换成一个文档对象
+   object-对象是一种自足的数据集合，与某个特定对象相关联的变量被称为这个对象的属性；只能通过某个特定对象去调用的函数被称为这个对象的方法
+   JS语言里的对象可以分为三种类型：
+      用户自定义对象-程序员自行创建；内建对象-内建在JS语言里的对象；宿主对象-由浏览器提供的对象
+   model/map-是某种事物的表现形式
+2、节点（node）：网络术语，表示网络中的一个连接点。元素节点（element node）；文本节点（text node）；
+   在xhtml文档中，文本节点总是被包含在元素节点的内部，但并非所有的元素节点都包含有文本节点。如ul没有直接包含任何文本节点，他包含其他元素节点li
+   属性节点：<p title="a gentle reminder">...</p>而title="a gentle reminder"就是一个属性节点，因为属性总是被放在起始标签里，所以属性节点总是被包含在元素节点中。
+   CSS：class属性，id属性
+   获取元素：getElementById;
+   getElementByTagName:通配符“*”必须放在引号里，为了将之与乘法符号区别开，如果你想知道某份文档里有多少元素节点，像下面这样使用通配符即可
+   alert(document.getElementsByTagName("*").length);

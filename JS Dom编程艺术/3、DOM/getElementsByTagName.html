@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping list</title>
+</head>
+<body>
+<h1>what to buy</h1>
+<p title="a gentle reminder">don't forget to buy this stuff</p>
+<ul id="purchases">
+    <li>a tin of beans</li>
+    <li class="sale">cheese</li>
+    <li class="sale important">milk</li>
+</ul>
+<script>
+    var items = document.getElementsByTagName("li");
+    for (var i=0; i<items.length; i++) {
+        alert(typeof items[i]);
+    }
+</script>
+//不赞成将JS代码直接嵌入文档中，但这确实是一种简便快捷的测试手段
+</body>
+</html>

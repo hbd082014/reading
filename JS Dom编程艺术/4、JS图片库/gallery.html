@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>image gallery</title>
+    <link rel="stylesheet" href="layout.css" type="text/css">
+    <script type="text/javascript" src="showPic.js"></script>
+</head>
+
+<body>
+<h1>snapshots</h1>
+<ul>
+    <li>
+        <a href="images/fireworks.jpg" title=" a fireworks display" onclick="showPic(this); return false;">fireworks</a> <!--在点击某个链接时，拦截这个网页的默认行为-->
+    </li>
+    <li>
+        <a href="images/coffee.jpg" title=" a cup of black coffee" onclick="showPic(this); return false;">coffee</a>
+    </li>
+    <li>
+        <a href="images/rose.jpg" title=" a red ,red rose" onclick="showPic(this); return false;">rose</a>
+    </li>
+    <li>
+        <a href="images/bigben.jpg" title=" the famous clock" onclick="showPic(this); return false;">big ben</a>
+    </li>
+</ul>
+<img id="placeholder" src="images/placeholder.gif" alt="my image gallery" />
+<!--增加一个占位图片的方法在这个主页上为图片预留一个浏览区域-->
+</body>
+</html>
