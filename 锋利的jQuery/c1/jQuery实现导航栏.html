@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery实现导航栏</title>
+    <link href="css/default.css" rel="stylesheet" type="text/css" />
+    <!--jQuery-->
+    <script src="../scripts/jquery-3.3.1.js" type="text/javascript"> </script>
+    <script type="text/javascript ">
+        $(document).ready(function(){
+            $(".level1 > a").click(function() {
+                $(this).addClass("current")                                         //给当前元素添加"current"样式
+                        .next().show()                                              //下一个元素显示
+                        .parent().siblings().children("a").removeClass("current")   //父元素的同辈元素的子元素<a>移除"current"样式
+                        .next().hide();                                             //下一个元素隐藏
+                return false;
+            });
+        });
+    </script>
+    <!--
+    当鼠标单击到a元素（class含有的level1的子元素），给他添加一个名为current的class，然后将紧邻后面的元素显示出来，同时将他的父辈的同辈元素内部的子元素<a>都去掉一个名为current的class，并将后面的元素都隐藏。
+    对同一个对象不超过3个操作的可以写成一行；
+    对于多个对象个少量操作，可以每个对象写一行；
+    记得为jQuery代码添加注释，养成良好的编码习惯
+    -->
+</head>
+<body>
+
+<div class="box">
+    <ul class="menu">
+        <li class="level1">
+            <a href="#none">衬衫</a>
+            <ul class="level2">
+                <li><a href="#none">短袖衬衫</a></li>
+                <li><a href="#none">长袖衬衫</a></li>
+                <li><a href="#none">短袖T恤</a></li>
+                <li><a href="#none">长袖T恤</a></li>
+            </ul>
+        </li>
+        <li class="level1">
+            <a href="#none">卫衣</a>
+            <ul class="level2">
+                <li><a href="#none">开襟卫衣</a></li>
+                <li><a href="#none">套头卫衣</a></li>
+                <li><a href="#none">运动卫衣</a></li>
+                <li><a href="#none">童装卫衣</a></li>
+            </ul>
+        </li>
+        <li class="level1">
+            <a href="#none">裤子</a>
+            <ul class="level2">
+                <li><a href="#none">短裤</a></li>
+                <li><a href="#none">休闲裤</a></li>
+                <li><a href="#none">牛仔裤</a></li>
+                <li><a href="#none">免烫卡其裤</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>
